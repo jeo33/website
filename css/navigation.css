@@ -1,0 +1,134 @@
+.naviation_bar_left{
+    margin-top: 0px;
+    display: flex;
+    height: 80px;
+    border-width: 0px;
+    border-color: black;
+    border-style: solid;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    background-image: url(../resources/gnb_bg.png);
+    background-position-y: 30%;
+    /*background-repeat: no-repeat;*/
+}
+.naviation_bar_right {
+    margin-top: 0px; /* Adjust width to fill remaining space after accounting for left navigation bar */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 80px;
+    border-width: 0px;
+    border-color: black;
+    border-style: solid;
+    align-items: start;
+}
+.naviation_bar_right_2 {
+    margin-top: 0px; /* Adjust width to fill remaining space after accounting for left navigation bar */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 80px;
+    border-width: 0px;
+    border-color: black;
+    border-style: solid;
+    align-items: start;
+}
+
+.bar_block {
+    align-items: start;
+    /* display: inline-block; Remove this line */
+}
+
+
+.name_tag {
+    font-family: Georgia, serif;
+    margin: 0;
+    font-size: 25px;
+    color: rgb(150, 150, 150);
+    text-align: center;
+    padding: 25px 25px; /* Adjust padding as needed */
+    transition: background-image 0.3s; /* Add transition for smoother effect */
+}
+
+.name_tag:hover {
+    background-image: url(../resources/gnb_dodge.png);
+    background-repeat: no-repeat;
+    background-position: center 1%; /* Simplified background position */
+    color: white;
+    cursor: pointer;
+}
+.icon{
+    height: 80px;
+    object-fit: cover;
+}
+
+.search_bar{
+    vertical-align: center;
+    display: block;
+}
+.first_span_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition:transform 1s linear;
+}
+
+.first_span_content p {
+    font-size: 22px;
+    color: red;
+    font-family: monospace;
+    overflow: hidden; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em;
+    animation: 
+      typing 4s steps(30, end) alternate infinite, blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 50%;
+    }
+    51% {
+        width: 51%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}
+
+
+.first_span:hover .first_span_image{
+    transform: translateX(10%);
+}
+.first_span{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: blue;
+}
+.first_span_image{
+    width: 100%;
+    transition:transform 1s linear;
+}
+
+.expand_text{
+    width: 1000px;
+    animation: zoom 3.5s alternate infinite;
+}
+@keyframes zoom {
+    
+    from, to { color: transparent ;
+        font-size: 16px;
+    }
+    50% { color: blue ;
+        font-size: 82px;}
+}
