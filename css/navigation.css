@@ -45,14 +45,14 @@
     font-size: 25px;
     color: rgb(150, 150, 150);
     text-align: center;
-    padding: 25px 25px; /* Adjust padding as needed */
-    transition: background-image 0.3s; /* Add transition for smoother effect */
+    padding: 25px 25px; 
+    transition: background-image 0.3s;
 }
 
 .name_tag:hover {
     background-image: url(../resources/gnb_dodge.png);
     background-repeat: no-repeat;
-    background-position: center 1%; /* Simplified background position */
+    background-position: center 1%; 
     color: white;
     cursor: pointer;
 }
@@ -61,11 +61,9 @@
     object-fit: cover;
 }
 
-.search_bar{
-    vertical-align: center;
-    display: block;
-}
 .first_span_content{
+    margin-left: 40px;
+    margin-right: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,7 +79,8 @@
     margin: 0 auto; 
     letter-spacing: .15em;
     animation: 
-      typing 4s steps(30, end) alternate infinite, blink-caret .5s step-end infinite;
+      typing 4s steps(30, end) alternate infinite, 
+      blink-caret .5s step-end infinite;
 }
 
 @keyframes typing {
@@ -111,12 +110,13 @@
 .first_span{
     display: flex;
     width: 100%;
+    height: 550px;
     flex-direction: row;
     justify-content: space-evenly;
     background-color: blue;
 }
 .first_span_image{
-    width: 100%;
+    width: 800px;
     transition:transform 1s linear;
 }
 
@@ -132,3 +132,47 @@
     50% { color: blue ;
         font-size: 82px;}
 }
+
+
+.square{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    animation:  s_to_s 2s alternate infinite linear;
+}
+
+@keyframes s_to_s {
+    from, to {
+      border-radius: 0;
+      transform: translateX(0) rotate(0deg); /* Initial rotation and translation */
+    }
+    50% {
+      border-radius: 50%;
+      transform: translateX(1000%) rotate(360deg) ; /* Full rotation and translation */
+    }
+    100% {
+      transform: translateX(1000%) rotate(360deg) ; /* Full rotation and translation */
+    }
+  }
+  
+  .second_span{
+    display: flex;
+    width: 100%;
+    height:400px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    padding: 40px;
+    background-color: purple;
+}
+  .footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+  }
+
+  .icon_image{
+    height: 30px;
+    object-fit: contain;
+    padding: 8px;
+  }
